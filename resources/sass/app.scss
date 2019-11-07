@@ -1,8 +1,35 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+#menu-toggler {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.collapse.show a, .collapsing a {
+    font-size: 1.4rem;
+}
+.collapse.show .link-separator, .collapsing .link-separator {
+    display: none;
+}
+
+main {
+    margin-top: 100px;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        flex-flow: column nowrap;
+    }
+
+    main {
+        margin-top: 110px;
+    }
+}

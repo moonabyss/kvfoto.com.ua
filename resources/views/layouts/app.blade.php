@@ -22,7 +22,41 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+                <!-- logo -->
+                <div id="logo" class="mr-auto ml-lg-auto">
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <img src="{{ asset('img/logo.png') }}" height=75>
+                    </a>
+                </div>
+                <!-- button -->
+                <button id="menu-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- menu -->
+                <div class="collapse navbar-collapse align-items-center my-0 ml-2" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/') }}">Gallery</a>
+                        </li>
+                        <li class="nav-item"><span class="nav-link link-separator">•</span></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/') }}">Wedding Stories</a>
+                        </li>
+                        <li class="nav-item"><span class="nav-link link-separator">•</span></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/') }}">Contact</a>
+                        </li>
+                        <li class="nav-item"><span class="nav-link link-separator">•</span></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/') }}">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
             <div class="container flex-column">
                 <div class="row justify-content-center">
                     <div class="mx-auto text-center">
@@ -31,23 +65,35 @@
                         </a>
                     </div>
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button id="menu-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="row">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse align-items-center" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/') }}">Gallery</a>
+                            </li>
+                            <li class="nav-item"><span class="nav-link link-separator">•</span></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/') }}">Wedding Stories</a>
+                            </li>
+                            <li class="nav-item"><span class="nav-link link-separator">•</span></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/') }}">Contact</a>
+                            </li>
+                            <li class="nav-item"><span class="nav-link link-separator">•</span></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/') }}">Feedback</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav> -->
 
-        <main class="py-4">
+        <main class="py-lg-4 py-0">
             @yield('content')
         </main>
     </div>
