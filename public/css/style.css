@@ -1,0 +1,87 @@
+/* header */
+
+/* navbar */
+nav {
+    background:#c8eaea;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        flex-flow: column nowrap;
+    }
+}
+/* end of navbar */
+
+/* button */
+#menu-toggler {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border-width: 0;
+}
+
+#menu-toggler:focus {
+    outline: none;
+}
+
+.line1, .line2, .line3 {
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    transition: all .4s;
+}
+
+.change .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .line2 {
+    opacity: 0;
+}
+
+.change .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+/* end of button */
+
+/* menu */
+.link-separator {
+    user-select: none;
+}
+
+@media (max-width: 991px) {
+    .collapse.show a, .collapsing a {
+        font-size: 1.4rem;
+    }
+
+    .collapse a, .collapsing a {
+        margin-left: -0.5rem;
+        transition: all .5s;
+        opacity: 0;
+    }
+    
+    .collapse.show a {
+        margin-left: 0.25rem;
+        opacity: 1;
+        transition: all .5s;
+    }
+
+    .collapse.show .link-separator, .collapsing .link-separator {
+        display: none;
+    }
+}
+/* end of menu */
+
+/* end of header */
+
+/* main */
+main {
+    margin-top: 100px;
+}
+
+@media (min-width: 992px) {
+    main {
+        margin-top: 110px;
+    }
+}
+/* end of main */

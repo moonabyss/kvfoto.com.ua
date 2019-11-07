@@ -12,6 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/script.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -19,11 +20,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
                 <!-- logo -->
                 <div id="logo" class="mr-auto ml-lg-auto">
                     <a class="navbar-brand" href="{{ url('/') }}">
@@ -31,11 +33,18 @@
                     </a>
                 </div>
                 <!-- button -->
-                <button id="menu-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
+                <button id="menu-toggler" class="navbar-toggler nav-button" type="button" 
+                        data-toggle="collapse" data-target="#navbarSupportedContent" 
+                        aria-controls="navbarSupportedContent" aria-expanded="false" 
+                        aria-label="{{ __('Toggle navigation') }}"
+                        onclick="this.blur();">
+                    {{-- <span class="navbar-toggler-icon nav-button"></span> --}}
+                    <div class="bg-secondary line1"></div>
+                    <div class="bg-secondary line2"></div>
+                    <div class="bg-secondary line3"></div>
                 </button>
                 <!-- menu -->
-                <div class="collapse navbar-collapse align-items-center my-0 ml-2" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse align-items-center my-0" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/') }}">Gallery</a>

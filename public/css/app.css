@@ -11106,6 +11106,10 @@ a.text-dark:focus {
   right: 30px;
 }
 
+#menu-toggler:focus {
+  outline: none;
+}
+
 .collapse.show a,
 .collapsing a {
   font-size: 1.4rem;
@@ -11114,6 +11118,13 @@ a.text-dark:focus {
 .collapse.show .link-separator,
 .collapsing .link-separator {
   display: none;
+}
+
+.link-separator {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 main {
