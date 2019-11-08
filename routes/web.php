@@ -12,7 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('gallery');
+    /* $images = [
+        "http://farm8.staticflickr.com/7067/7038298347_0481d2a7e3_o.jpg",
+        "http://farm8.staticflickr.com/7199/7038298927_bfc3993208_b.jpg",
+        "http://farm8.staticflickr.com/7199/7038298927_bfc3993208_b.jpg"
+    ]; */
+
+    $images = array_diff(scandir('./images'), array('..', '.'));
+    return view('gallery', compact('images'));
 });
 
 Auth::routes();

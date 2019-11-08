@@ -11,8 +11,7 @@
     <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/script.js') }}" defer></script>
+    @yield('scripts')
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -21,11 +20,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    @yield('styles')
 </head>
 <body>
     <div id="app">
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-light pb-0 fromTop">
                 <!-- logo -->
                 <div id="logo" class="mr-auto ml-lg-auto">
                     <a class="navbar-brand" href="{{ url('/') }}">
@@ -44,67 +44,37 @@
                     <div class="bg-secondary line3"></div>
                 </button>
                 <!-- menu -->
-                <div class="collapse navbar-collapse align-items-center my-0" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse align-items-center p-lg-0 my-0 pl-2 pr-5 pb-4 ml-n1" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">Gallery</a>
+                            <a class="nav-link menu1" href="{{ url('/') }}">Gallery</a>
                         </li>
                         <li class="nav-item"><span class="nav-link link-separator">•</span></li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">Wedding Stories</a>
+                            <a class="nav-link menu2" href="{{ url('/') }}">Wedding Stories</a>
                         </li>
                         <li class="nav-item"><span class="nav-link link-separator">•</span></li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">Contact</a>
+                            <a class="nav-link menu3" href="{{ url('/') }}">Contact</a>
                         </li>
                         <li class="nav-item"><span class="nav-link link-separator">•</span></li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">Feedback</a>
+                            <a class="nav-link menu4" href="{{ url('/') }}">Feedback</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
-        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-            <div class="container flex-column">
-                <div class="row justify-content-center">
-                    <div class="mx-auto text-center">
-                        <a class="navbar-brand" href="{{ url('/') }}">
-                            <img src="{{ asset('img/logo.png') }}">
-                        </a>
-                    </div>
-                </div>
-                <button id="menu-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="row">
-                    <div class="collapse navbar-collapse align-items-center" id="navbarSupportedContent">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/') }}">Gallery</a>
-                            </li>
-                            <li class="nav-item"><span class="nav-link link-separator">•</span></li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/') }}">Wedding Stories</a>
-                            </li>
-                            <li class="nav-item"><span class="nav-link link-separator">•</span></li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/') }}">Contact</a>
-                            </li>
-                            <li class="nav-item"><span class="nav-link link-separator">•</span></li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/') }}">Feedback</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav> -->
-
-        <main class="py-lg-4 py-0">
+        <main class="py-0">
             @yield('content')
         </main>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
+    <script>
+        @yield('last_scripts')
+    </script>
 </body>
 </html>
