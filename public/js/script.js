@@ -27,7 +27,7 @@ function resizeMasonryItem(item) {
      * S = H1 / T
      */
 
-    let rowSpan = Math.ceil((item.querySelector('.card-content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap))+8;
+    let rowSpan = Math.ceil((item.querySelector('.card-content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap))+1;
 
     /* Set the spanning as calculated above (S) */
     item.style.gridRowEnd = 'span ' + rowSpan;
@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     window.addEventListener('resize', resizeAllMasonryItems);
 
-    ReLoadImages();
+    //ReLoadImages();
 
     resizeAllMasonryItems ();
 

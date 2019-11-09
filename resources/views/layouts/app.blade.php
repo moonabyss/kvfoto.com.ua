@@ -45,7 +45,7 @@
                     <div class="bg-secondary line3"></div>
                 </button>
                 <!-- menu -->
-                <div class="collapse navbar-collapse align-items-center p-lg-0 my-0 pl-2 pr-5 pb-4 ml-n1" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse align-items-center p-lg-0 my-0 pl-2 pr-5 ml-n1" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link menu1" href="{{ url('/') }}">Gallery</a>
