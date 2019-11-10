@@ -1,6 +1,7 @@
 function ReLoadImages(){
-    $('img[data-src]').each( function(){
+    $('img[data-src]').each(function(){
         //* set the img src from data-src
+        //$(this).on('load', resizeAllMasonryItems);
         //$(this).attr('src', $(this).attr('data-src'));
     });
 }
@@ -44,7 +45,10 @@ $(document).ready(function() {
 
     //ReLoadImages();
 
-    resizeAllMasonryItems ();
+    resizeAllMasonryItems();
+    setTimeout(() => {
+        resizeAllMasonryItems();
+    }, 1000);
 
     $(document).on("click", '[data-toggle="lightbox"]', function(event) {
         event.preventDefault();

@@ -75,7 +75,9 @@
     <script src="{{ asset('js/script.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=" crossorigin="anonymous"></script>
     <script>
-        @yield('last_scripts')
+        $(function(){
+            @yield('last_scripts')
+        });
     </script>
 </body>
 </html>
