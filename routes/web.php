@@ -20,6 +20,8 @@ Route::get('/contacts', function () {
     return view('contacts');
 });
 
+Route::post('/contacts', 'ContactController@sendMessage');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -53,6 +53,11 @@
 .change .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+@media (max-width: 991px) {
+    #menu-toggler {
+        right: 0px;
+    }
+}
 /* end of button */
 
 /* menu */
@@ -70,8 +75,8 @@
     }
 
     #navbarSupportedContent {
-        /* background: #fff; */
-        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .95) 50%, rgba(255, 255, 255, .25) 100%);
+        background: #fff;
+        /* background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .95) 50%, rgba(255, 255, 255, .25) 100%); */
         position: absolute;
         top: 90px;
         z-index: 1100;
@@ -159,13 +164,14 @@
 
 /* contact */
 .contacts {
-    background: linear-gradient(105deg, rgba(21, 31, 32, .85) 0%, rgba(21, 31, 32, .75) 50%, transparent 50%), 
+    background: linear-gradient(90deg, rgba(21, 31, 32, .85) 0%, rgba(21, 31, 32, .85) 50%, transparent 50%), 
                 url('../img/contacts-img.jpg') center center no-repeat /cover;
     height: calc(100vh - 132px);
 }
 @media (max-width: 991px) {
     .contacts {
-        background: linear-gradient(rgba(21, 31, 32, .85) 0%, rgba(21, 31, 32, .75) 50%, transparent 50%);
+        background: rgba(21, 31, 32, .85);
+        height: calc(100vh - 93px);
     }
 }
 

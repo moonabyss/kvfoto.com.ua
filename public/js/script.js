@@ -40,7 +40,7 @@ $(document).ready(function() {
             || ($('.nav-button').toggleClass('change') && $('.collapse a').toggleClass('fromLeft'));
     });
 
-
+    //gallery
     window.addEventListener('resize', resizeAllMasonryItems);
 
     //ReLoadImages();
@@ -54,4 +54,6 @@ $(document).ready(function() {
         event.preventDefault();
         $(this).ekkoLightbox({ wrapping: true, alwaysShowClose: false });
     });
+
+    //contacts
 });

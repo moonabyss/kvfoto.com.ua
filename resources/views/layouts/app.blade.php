@@ -26,7 +26,7 @@
 <body>
     <div id="app">
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light pb-0 pl-0 fromTop">
+            <nav class="navbar navbar-expand-lg navbar-light p-0 pt-2 fromTop">
                 <!-- logo -->
                 <div id="logo" class="mr-auto ml-lg-auto ml-3">
                     <a class="navbar-brand" href="{{ url('/') }}">
