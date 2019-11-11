@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-<div class="container bg-white fromDown">
+<div class="container bg-white fromDown gallery">
     <div class="row">
         <div class="col">
             <div class="masonry">

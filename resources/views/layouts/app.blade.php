@@ -26,9 +26,9 @@
 <body>
     <div id="app">
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light pb-0 fromTop">
+            <nav class="navbar navbar-expand-lg navbar-light pb-0 pl-0 fromTop">
                 <!-- logo -->
-                <div id="logo" class="mr-auto ml-lg-auto">
+                <div id="logo" class="mr-auto ml-lg-auto ml-3">
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <img src="{{ asset('img/logo.png') }}" height=75>
                     </a>
@@ -39,29 +39,28 @@
                         aria-controls="navbarSupportedContent" aria-expanded="false" 
                         aria-label="{{ __('Toggle navigation') }}"
                         onclick="this.blur();">
-                    {{-- <span class="navbar-toggler-icon nav-button"></span> --}}
                     <div class="bg-secondary line1"></div>
                     <div class="bg-secondary line2"></div>
                     <div class="bg-secondary line3"></div>
                 </button>
                 <!-- menu -->
-                <div class="collapse navbar-collapse align-items-center p-lg-0 my-0 pl-2 pr-5 ml-n1" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
+                <div class="collapse navbar-collapse align-items-center p-lg-0 my-0 pl-2 pr-5 pl-4 w-100" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-lg-auto mr-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link menu1" href="{{ url('/') }}">Gallery</a>
+                            <a class="nav-link menu1" href="{{ url('/') }}">Галерея</a>
                         </li>
                         <li class="nav-item"><span class="nav-link link-separator">•</span></li>
                         <li class="nav-item">
-                            <a class="nav-link menu2" href="{{ url('/') }}">Wedding Stories</a>
+                            <a class="nav-link menu2" href="{{ url('/') }}">Альбомы</a>
                         </li>
                         <li class="nav-item"><span class="nav-link link-separator">•</span></li>
                         <li class="nav-item">
-                            <a class="nav-link menu3" href="{{ url('/') }}">Contact</a>
+                            <a class="nav-link menu3" href="{{ url('/contacts') }}">Контакты</a>
                         </li>
-                        <li class="nav-item"><span class="nav-link link-separator">•</span></li>
+                        <!-- <li class="nav-item"><span class="nav-link link-separator">•</span></li>
                         <li class="nav-item">
-                            <a class="nav-link menu4" href="{{ url('/') }}">Feedback</a>
-                        </li>
+                            <a class="nav-link menu4" href="{{ url('/') }}">Отзывы</a>
+                        </li> -->
                     </ul>
                 </div>
             </nav>
