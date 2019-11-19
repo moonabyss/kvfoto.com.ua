@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    $images = array_diff(scandir('./images'), array('..', '.'));
+    $images = array_diff(scandir('./images/gallery'), array('..', '.', '500w'));
     return view('gallery', compact('images'));
 });
 

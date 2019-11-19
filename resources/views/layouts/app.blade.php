@@ -20,7 +20,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
+    <link href="{{ asset('css/ekko-lightbox/5.3.0/ekko-lightbox.css') }}" rel="stylesheet">
     @yield('styles')
 </head>
 <body>
@@ -69,10 +69,22 @@
         <main class="py-0">
             @yield('content')
         </main>
+
+        <footer>
+        <div class="container bg-white text-center">
+            <div class="row align-items-center">
+                <div class="col mt-4 mb-3 pt-3 border-top">
+                    <div class="text-muted">
+                    <a href="https://moonabyss.com/" target="_blank" class="text-muted">Developed by <span>moonabyss</span> 2019</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </footer>
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/ekko-lightbox/5.3.0/ekko-lightbox.min.js') }}"></script>
     <script>
         $(function(){
             @yield('last_scripts')

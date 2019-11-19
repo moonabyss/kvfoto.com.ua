@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('scripts')
-
+<script src='https://www.google.com/recaptcha/api.js' async defer ></script>
 @endsection
 
 @section('styles')
@@ -15,7 +15,7 @@
                 <h3 class="display-5 mb-3 text-white">
                     Напишите мне
                 </h3>
-                <form class="contact-form" method="POST">
+                <form class="contact-form" method="POST" autocomplete="off">
                 @csrf
                     <div class="form-group py-4">
                         @error('name')
@@ -23,23 +23,31 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
-                        <input type="text" name="name" class="form-control my-2 p-2 input" placeholder="Имя *">
+                        <input type="text" name="name" class="form-control my-2 p-2 input @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Имя *" required autocomplete="off" autofocus>
                         <label for="name" class="label">Имя</label>
                     </div>
                     <div class="form-group py-4">
-                        @error('phone')
+                        @error('zvonilka')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
-                        <input type="text" name="phone" class="form-control my-2 p-2 input" placeholder="Телефон *" id="phone">
-                        <label for="phone" class="label">Телефон</label>
+                        <input type="text" name="zvonilka" class="form-control my-2 p-2 input @error('zvonilka') is-invalid @enderror" value="{{ old('zvonilka') }}" placeholder="Телефон *" required autocomplete="off">
+                        <label for="zvonilka" class="label">Телефон</label>
                     </div>
                     <div class="form-group py-4">
-                        <input type="text" class="form-control my-2 p-2 input" placeholder="Комментарий">
+                        @error('commentar')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                        <input type="text" name="commentar" class="form-control my-2 p-2 input @error('commentar') is-invalid @enderror" value="{{ old('commentar') }}" placeholder="Комментарий *" required autocomplete="off">
                         <label for="commentar" class="label">Комментарий</label>
                     </div>
-                    <button type="submit" class="btn btn-block p-2 font-weight-bold text-uppercase mt-5 submit-button">Отправить</button>
+                    <div class="row justify-content-center">
+                        <div class="g-recaptcha form-group pt-5 justify-content-center" data-sitekey="6Lf-icMUAAAAAFsc35n5Re-mNmFlWT1mkvqLkQTV"></div>
+                    </div>
+                    <button type="submit" class="btn btn-block p-2 font-weight-bold text-uppercase my-5 submit-button">Отправить</button>
                 </form>
             </div>
         </div>

@@ -16,13 +16,22 @@ class ContactController extends Controller
 
     protected function sendMessage(Request $request)
     {
-        $validator = validator($request->all());
-        //dd($validator);
-        if ($validator->fails()) {
-            return redirect('contacts')
-                        ->withErrors($validator)
-                        ->withInput();
+        //google recaptcha
+        $post = $request->all();
+        if(isset($post['g-recaptcha-response']) && !empty($post['g-recaptcha-response'])) {
+            $secret = env('GOOGLE_CAPTCHA_KEY', '');
+            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+            $responseData = json_decode($verifyResponse);
+            if($responseData->success)
+            {
+                $this->validate($request, [
+                    'name' => 'required|string|min:3|max:50',
+                    'zvonilka' => 'required|string|min:10|max:20',
+                    'commentar' => 'required|min:3|max:100',
+                ]);
+            }
         }
+
         return view('contacts');
     }
 }
